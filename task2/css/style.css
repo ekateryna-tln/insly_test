@@ -1,0 +1,151 @@
+* {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: rgb(40, 66, 85);
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.form {
+	width: 400px;
+	padding: 20px;
+	margin-top: -30px;
+	border-radius: 4px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(62,105,138,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(62,105,138,1);
+	box-shadow: 0px 0px 10px 0px rgba(62,105,138,1);
+}
+
+.form__body {
+	position: relative;
+}
+
+.form__body:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/loading.gif') center / 50px no-repeat;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.form__body._sendForm:after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form__title {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.form__item {
+	margin: 0 0 20px 0;
+}
+
+.form__label {
+	font-size: 18px;
+	display: block;
+	margin: 0 0 4px 0;
+}
+
+.form__input, .form__select {
+	width: 100%;
+	height: 40px;
+	padding: 0 16px;
+	font-size: 18px;
+	line-height: 40px;
+	border-radius: 4px;
+	border: 1px solid rgba(40, 66, 85, 0.5);
+	background-color: #fff;
+}
+
+input::placeholder {
+  color: rgba(40, 66, 85, 0.3);
+}
+
+.form__input:focus, .form__select:focus {
+	box-shadow: 0 0 5px rgba(40, 66, 85, 0.5);
+}
+
+.form__button {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: rgba(40, 66, 85, 0.80);
+	border-radius: 4px;
+	transition: background-color 0.3s ease 0s;
+}
+
+.form__button:hover {
+	background-color: rgb(40, 66, 85);
+}
+
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.table {
+	margin-top: 40px;
+}
+
+.table__row {
+	display: flex;
+	border: 1px solid rgb(40, 66, 85);
+}
+
+.table__item_descr, .table__item_ploicy {
+	width: 150px;
+}
+
+.table__item_ploicy, .table__item_inst {
+	text-align: right;
+}
+
+.table__item_ploicy .table__header, .table__item_inst .table__header{
+	text-align: left;
+}
+
+.table__cell {
+	min-width: 75px;
+	height: 30px;
+	line-height: 25px;
+	padding: 5px;
+	border-top: none;
+	border-left: none;
+	border-bottom: 1px solid rgb(40, 66, 85);
+	border-right: 1px solid rgb(40, 66, 85);
+	overflow: hidden;
+}
+
+.table__cell:last-child{
+	border-bottom: none;
+}
+
+.table__column:last-child .table__cell {
+	border-right: none;
+}
+
+.table__item_bold {
+	font-weight: 1000;
+}

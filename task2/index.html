@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Calculator</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<link rel="stylesheet" href="css/null_style.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="form">
+				<form action="#" method="post" enctype="multipart/form-data" class="form__body" id="form_js">
+					<h1 class="form__title">Calculator</h1>
+					<div class="form__item">
+						<label for="value" class="form__label">Estimated value of the car*</label>
+						<input type="number" name="value" id="value" class="form__input" min="100" max="100000" placeholder="100 - 100 000 EUR" required />
+					</div>
+					<div class="form__item">
+						<label for="tax_persent" class="form__label">Tax percentage*</label>
+						<input type="number" name="tax_persent" id="tax_persent" class="form__input" value="" min="1" max="100" placeholder="0 - 100%" required/>
+					</div>
+					<div class="form__item">
+						<div for="part_count" class="form__label">Number of instalments*</div>
+						<select name="part_count" id="part_count" class="form__select" required>
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+					<button type="submit" class="form__button">Calculate</button>
+				</form>
+			</div>
+			<div class="table" id="table_wrapper_js">
+				<div class="table__body">
+					<div class="table__row" id="table_row_js">
+						<div class="table__column">
+							<div class="table__item table__item_descr">
+								<div class="table__cell table__header"></div>
+								<div class="table__cell">Value</div>
+								<div class="table__cell">Base premium <span id="base_premium_span_js"></span></div>
+								<div class="table__cell">Commission (17%)</div>
+								<div class="table__cell">Tax <span id="tax_persent_span_js"></span></div>
+								<div class="table__cell"><span class="table__item_bold">Total Cost</span></div>
+							</div>
+						</div>
+						<div class="table__column">
+							<div class="table__item table__item_ploicy">
+								<div class="table__cell table__header"><span class="table__item_bold">Policy</span></div>
+								<div class="table__cell" id="ploicy_value_js"></div>
+								<div class="table__cell" id="ploicy_basePrice_js"></div>
+								<div class="table__cell" id="ploicy_commission_js"></div>
+								<div class="table__cell" id="ploicy_tax_js"></div>
+								<div class="table__cell">
+									<span class="table__item_bold" id="ploicy_total_js"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
