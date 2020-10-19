@@ -8,7 +8,7 @@ class PolicyInstallment
 	private $commissionPersent = 17;
 	private $taxPersent;
 
-	public function __construct($taxPersent)
+	public function __construct(int $taxPersent)
 	{
 		$this->taxPersent = $taxPersent;
 	}

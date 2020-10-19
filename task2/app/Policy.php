@@ -17,7 +17,7 @@ class Policy
 	private $basePricePersent = 11;
 	private $basePricePersentSpec = 13;
 	
-	public function __construct($inputEntity)
+	public function __construct(InputEntity $inputEntity)
 	{
 		$this->value = $inputEntity->value;
 		$this->taxPersent = $inputEntity->taxPersent;
@@ -26,13 +26,7 @@ class Policy
 
 	public function getPolicy($clientHours, $clientDay)
 	{
-		$this->basePricePersentCurrent = $this->basePricePersent;
-		if (($clientDay == $this->specDay) 
-				&& ($clientHours >= $this->specHoursFrom && $clientHours < $this->specHoursTo)
-			) {
-			$this->basePricePersentCurrent = $this->basePricePersentSpec;
-		}
-
+		$this->setPriceBaseCurrent($clientHours, $clientDay);
 		$basePrice = Helper::calculatePercent($this->value, $this->basePricePersentCurrent);
 		$policyInstallment = new PolicyInstallment($this->taxPersent);
 		$totalPolicy = $policyInstallment->getInstallment($basePrice);
@@ -67,6 +61,16 @@ class Policy
 		$installment->total = $totalPolicy->total - $partPolicy->total*$count;
 
 		return $installment;
+	}
+
+	private function setPriceBaseCurrent($clientHours, $clientDay)
+	{
+		$this->basePricePersentCurrent = $this->basePricePersent;
+		if (($clientDay == $this->specDay) 
+				&& ($clientHours >= $this->specHoursFrom && $clientHours < $this->specHoursTo)
+			) {
+			$this->basePricePersentCurrent = $this->basePricePersentSpec;
+		}
 	}
 
 }
