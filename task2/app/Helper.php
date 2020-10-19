@@ -3,7 +3,7 @@
 class Helper
 {
 
-	public static function isValidInput($inputEntity)
+	public static function isValidInput(InputEntity $inputEntity)
 	{
 		if ($inputEntity->value < 100 || $inputEntity->value > 100000) {
 			return false;
@@ -17,7 +17,7 @@ class Helper
 		return true;
 	}
 
-	public static function calculatePercent($value, $percent) 
+	public static function calculatePercent(float $value, int $percent) 
 	{
 		return ceil($value * ($percent))/100; 
 	}

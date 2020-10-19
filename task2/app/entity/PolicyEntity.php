@@ -3,8 +3,8 @@
 class PolicyEntity
 {
 
-	public $totalPolicy;
-	public $instalmentList;
-	public $basePricePersent;
+	public InstallmentEntity $totalPolicy;
+	public array $instalmentList;
+	public float $basePricePersent;
 
 }

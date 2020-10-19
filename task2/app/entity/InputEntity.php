@@ -3,8 +3,8 @@
 class InputEntity
 {
 
-	public $value;
-	public $taxPersent;
-	public $partCount;
+	public int $id;
+	public int $taxPersent;
+	public int $partCount;
 
 }

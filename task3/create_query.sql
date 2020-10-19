@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS employee (
 	address VARCHAR(300),
 	created_by INT NOT NULL,
 	created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	updated_by INT  NOT NULL,
+	updated_by INT NOT NULL,
 	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS employee_data (
 	education TEXT,
 	created_by INT NOT NULL,
 	created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	updated_by INT  NOT NULL,
+	updated_by INT NOT NULL,
 	updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	INDEX employee_id_index (employee_id),
 	FOREIGN KEY (employee_id)

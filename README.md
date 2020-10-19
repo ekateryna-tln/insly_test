@@ -9,7 +9,7 @@ There are two parts in the task: binary task decoding and name encoding.
 Folder task2.
 Main files to run the task are index.php and index.html.
 To start the task there is the ability to use docker-compose.
-php version 7.3
+PHP version 7.4
 
 # Task 3
 

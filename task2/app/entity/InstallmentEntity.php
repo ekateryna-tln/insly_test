@@ -3,9 +3,9 @@
 class InstallmentEntity
 {
 
-	public $basePrice = 0;
-	public $commission = 0;
-	public $tax = 0;
-	public $total = 0;
+	public float $basePrice = 0;
+	public float $commission = 0;
+	public float $tax = 0;
+	public float $total = 0;
 
 }

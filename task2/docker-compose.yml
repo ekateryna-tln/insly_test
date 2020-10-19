@@ -1,8 +1,8 @@
 version: '3.3'
 services:
   web:
-    image: php:7.3-apache
-    container_name: php73
+    image: php:7.4-apache
+    container_name: php74
     volumes:
       - .:/var/www/html/
     hostname: web

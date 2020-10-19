@@ -24,7 +24,7 @@ class Policy
 		$this->partCount = $inputEntity->partCount;
 	}
 
-	public function getPolicy($clientHours, $clientDay)
+	public function getPolicy(int $clientHours, int $clientDay)
 	{
 		$this->setPriceBaseCurrent($clientHours, $clientDay);
 		$basePrice = Helper::calculatePercent($this->value, $this->basePricePersentCurrent);
@@ -51,7 +51,7 @@ class Policy
 		return $policyEntity;
 	}
 
-	public function getLastInstalmentSum($totalPolicy, $partPolicy, $count)
+	public function getLastInstalmentSum(InstallmentEntity $totalPolicy, InstallmentEntity $partPolicy, int $count)
 	{
 		$installment = new InstallmentEntity();
 		
@@ -63,7 +63,7 @@ class Policy
 		return $installment;
 	}
 
-	private function setPriceBaseCurrent($clientHours, $clientDay)
+	private function setPriceBaseCurrent(int $clientHours, int $clientDay)
 	{
 		$this->basePricePersentCurrent = $this->basePricePersent;
 		if (($clientDay == $this->specDay) 

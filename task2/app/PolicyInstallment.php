@@ -5,15 +5,15 @@ include_once 'entity/InstallmentEntity.php';
 class PolicyInstallment
 {
 
-	private $commissionPersent = 17;
-	private $taxPersent;
+	private int $commissionPersent = 17;
+	private int $taxPersent;
 
 	public function __construct(int $taxPersent)
 	{
 		$this->taxPersent = $taxPersent;
 	}
 
-	public function getInstallment($basePrice)
+	public function getInstallment(float $basePrice)
 	{
 		$installmentEntity = new InstallmentEntity();
 		$installmentEntity->basePrice = $basePrice;
