@@ -15,7 +15,10 @@
 		
 		if (!Helper::isValidInput($inputEntity)) {
 			header('Content-type: application/json');
-			echo json_encode($response['error'] = 'Validation error');
+			$response = [
+				'error' => 'Validation error'
+			];
+			echo json_encode($response);
 			die;
 		}
 

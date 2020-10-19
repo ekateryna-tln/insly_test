@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		
 		if (response.ok) {
 			let result = await response.json();
+			
+			if (typeof result.error !== 'undefined') {
+				alert(result.error);
+				form.classList.remove('_sendForm');
+				return false;
+			}
 
 			document.getElementById('tax_persent_span_js').textContent = '(' + result.tax_persent + '%)';
 			document.getElementById('base_premium_span_js').textContent = '(' + result.policy.basePricePersent + '%)';

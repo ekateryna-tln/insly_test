@@ -6,16 +6,16 @@ include_once 'entity/PolicyEntity.php';
 class Policy
 {
 
-	private $value;
-	private $taxPersent;
-	private $partCount;
-	private $specHoursFrom = 15;
-	private $specHoursTo = 20;
-	private $specDay = 5;
+	private int $value;
+	private int $taxPersent;
+	private int $partCount;
+	private int $specHoursFrom = 15;
+	private int $specHoursTo = 20;
+	private int $specDay = 5;
 
-	private $basePricePersentCurrent;
-	private $basePricePersent = 11;
-	private $basePricePersentSpec = 13;
+	private int $basePricePersentCurrent;
+	private int $basePricePersent = 11;
+	private int $basePricePersentSpec = 13;
 	
 	public function __construct(InputEntity $inputEntity)
 	{
