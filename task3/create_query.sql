@@ -2,7 +2,7 @@
 * Create DB command could be used if necessary:
 * */
 
-/*CREATE DATABASE IF NOT EXISTS employee_db
+/*CREATE DATABASE IF NOT EXISTS employee_db;
 
 USE employee_db*/
 
