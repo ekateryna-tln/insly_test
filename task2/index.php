@@ -24,7 +24,7 @@
 
 		$policy = new Policy($inputEntity);
 		$response = [
-			'policy' => $policy->getPolicy($_POST['client_hours'], $_POST['client_day']),
+			'policy' => $policy->getPolicy((int) $_POST['client_hours'], (int) $_POST['client_day']),
 			'tax_persent' => $inputEntity->taxPersent,
 			'value' => $inputEntity->value
 		];
